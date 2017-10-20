@@ -1,5 +1,5 @@
 set(SOURCE_FILES
-    Elf.hpp
+    Elf.cpp
     )
 
 message("--> LIBS: ${LIBS}")

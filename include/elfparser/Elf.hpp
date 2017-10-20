@@ -8,6 +8,6 @@ namespace elf
     public:
       Elf();
       ~Elf();
-  }
+  };
 }
 #endif
