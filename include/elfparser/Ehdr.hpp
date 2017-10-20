@@ -28,6 +28,8 @@ namespace elf
         ~Ehdr();
       protected:
         void parse(std::vector<byte>);
+      private:
+        void parseIdent(byte[]);
     };
 }
 #endif

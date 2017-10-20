@@ -8,6 +8,7 @@ using namespace elf;
 Elf::Elf(std::string elfFilePath)
 {
     m_elfBinary = readFile(elfFilePath);
+    Ehdr header(m_elfBinary);
 }
 
 Elf::~Elf()
