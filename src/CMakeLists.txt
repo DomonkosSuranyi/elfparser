@@ -1,5 +1,6 @@
 set(SOURCE_FILES
     Elf.cpp
+    Ehdr.cpp
     )
 
 message("--> LIBS: ${LIBS}")
