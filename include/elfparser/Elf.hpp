@@ -2,12 +2,10 @@
 #define ELFPARSER_ELF_HPP_INC
 
 #include <string>
-#include <vector>
+#include <elfparser/Ehdr.hpp>
 
 namespace elf
 {
-    typedef unsigned char byte;
-
     class Elf
     {
       public:

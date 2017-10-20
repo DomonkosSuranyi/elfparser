@@ -2,29 +2,32 @@
 #define ELFPARSER_EHDR_HPP_INC
 
 #include <elfparser/elfdatatype.hpp>
+#include <elfparser/ElfStdElement.hpp>
 
 namespace elf
 {
-    class Ehdr
+    class Ehdr : ElfStdElement
     {
     public:
         unsigned char ident[16];
-        elf::Elf32Half     type;
-        elf::Elf32Half     machine;
-        elf::Elf32Word     version;
-        elf::Elf32Addr     entry;
-        elf::Elf32Off      phoff;
-        elf::Elf32Off      shoff;
-        elf::Elf32Word     flags;
-        elf::Elf32Half     ehsize;
-        elf::Elf32Half     phentsize;
-        elf::Elf32Half     phnum;
-        elf::Elf32Half     shentsize;
-        elf::Elf32Half     shnum;
-        elf::Elf32Half     shstrndx;
+        Elf32Half     type;
+        Elf32Half     machine;
+        Elf32Word     version;
+        Elf32Addr     entry;
+        Elf32Off      phoff;
+        Elf32Off      shoff;
+        Elf32Word     flags;
+        Elf32Half     ehsize;
+        Elf32Half     phentsize;
+        Elf32Half     phnum;
+        Elf32Half     shentsize;
+        Elf32Half     shnum;
+        Elf32Half     shstrndx;
 
-        Ehdr();
+        Ehdr(std::vector<byte>);
         ~Ehdr();
+      protected:
+        void parse(std::vector<byte>);
     };
 }
 #endif
