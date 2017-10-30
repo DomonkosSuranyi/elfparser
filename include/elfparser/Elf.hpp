@@ -9,12 +9,11 @@ namespace elf
     class Elf
     {
       public:
-        std::vector<byte> m_elfBinary;
-
         Elf(std::string);
         ~Elf();
 
       private:
+        const std::vector<byte> m_elfBinary;
         std::vector<byte> readFile(std::string);
     };
 }

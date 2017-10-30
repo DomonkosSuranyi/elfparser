@@ -24,10 +24,10 @@ namespace elf
         Elf32Half     shnum;
         Elf32Half     shstrndx;
 
-        Ehdr(std::vector<byte>);
+        Ehdr(const std::vector<byte>&);
         ~Ehdr();
       protected:
-        void parse(std::vector<byte>);
+        void parse(const std::vector<byte>&);
       private:
         void parseIdent(byte[]);
     };
